@@ -1,0 +1,29 @@
+apiVersion: v1
+
+kind: ConfigMap
+
+metadata:
+
+  name: fastapi-config
+
+data:
+  HNG_API_HOST: {{ .Values.fastapi.hng_api_host }}
+
+  HNG_API_ORIGINS: {{ .Values.fastapi.hng_api_origins }}
+
+  
+---
+
+apiVersion: v1
+
+kind: ConfigMap
+
+metadata:
+
+  name: react-config
+
+data:
+  REACT_APP_API_URL: {{ .Values.fastapi.react_app_api_url }}
+
+  REACT_APP_LESSON_DAY: {{ .Values.fastapi.react_app_lesson_day }}
+
